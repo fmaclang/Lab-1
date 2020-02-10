@@ -154,10 +154,13 @@ public class StaticSet<E> implements Set<E> {
 		Set<Set<E>> singleton = new StaticSet<Set<E>>(this.currentSize);
 		
 		for(E e : this.elements) {
-			
+			Set<E> temp = new StaticSet<E>(1);
+			temp.add(e);
+			singleton.add(temp);
 		}
 		
-		return null;
+		return singleton;
+		
 	}
 
 }
