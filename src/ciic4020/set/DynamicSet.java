@@ -98,5 +98,10 @@ public class DynamicSet<E> implements Set<E> {
 	public boolean equals(Set<E> S2) {
 		return this.theSet.equals(S2);
 	}
+	@Override
+	public Set<Set<E>> singletonSets() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

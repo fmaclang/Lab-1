@@ -148,4 +148,16 @@ public class StaticSet<E> implements Set<E> {
 		return this.difference(S2).isEmpty() ? true : false;
 	}
 
+	@Override
+	public Set<Set<E>> singletonSets() {
+		
+		Set<Set<E>> singleton = new StaticSet<Set<E>>(this.currentSize);
+		
+		for(E e : this.elements) {
+			
+		}
+		
+		return null;
+	}
+
 }
