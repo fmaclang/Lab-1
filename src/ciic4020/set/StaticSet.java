@@ -162,5 +162,23 @@ public class StaticSet<E> implements Set<E> {
 		return singleton;
 		
 	}
+	
+	public static boolean checkDisjoint(Object[] sets) {
+		
+		Set<Integer> temp = new StaticSet<Integer>(10);
+		
+		for(int i=0; i<sets.length; i++) {
+			for(int j=i+1; j<sets.length; j++) {
+				
+				if(sets[i] instanceof Set && sets[j] instanceof Set) {
+					temp = ((Set<Integer>)sets[i]).intersection((Set<Integer>)sets[j]);
+				}
+				
+			}
+		}
+		
+		return temp.isEmpty();
+
+	}
 
 }
