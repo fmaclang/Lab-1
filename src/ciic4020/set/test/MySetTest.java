@@ -38,23 +38,23 @@ public class MySetTest {
 		mySet2.add("Apu");
 		assertFalse(mySet2.equals(mySet1));
 		
-		Set<Set<String>> singletonSet = new StaticSet<Set<String>>(10);
-		
-		Set<String> temp1 = new StaticSet<String>(1);
-		temp1.add("Amy");
-		Set<String> temp2 = new StaticSet<String>(1);
-		temp2.add("Jil");
-		Set<String> temp3 = new StaticSet<String>(1);
-		temp3.add("Moe");
-		Set<String> temp4 = new StaticSet<String>(1);
-		temp4.add("Ned");
-		
-		singletonSet.add(temp1);
-		singletonSet.add(temp2);
-		singletonSet.add(temp3);
-		singletonSet.add(temp4);
-		
-		assertTrue(mySet1.singletonSets().equals(singletonSet));
+//		Set<Set<String>> singletonSet = new StaticSet<Set<String>>(10);
+//		
+//		Set<String> temp1 = new StaticSet<String>(1);
+//		temp1.add("Amy");
+//		Set<String> temp2 = new StaticSet<String>(1);
+//		temp2.add("Jil");
+//		Set<String> temp3 = new StaticSet<String>(1);
+//		temp3.add("Moe");
+//		Set<String> temp4 = new StaticSet<String>(1);
+//		temp4.add("Ned");
+//		
+//		singletonSet.add(temp1);
+//		singletonSet.add(temp2);
+//		singletonSet.add(temp3);
+//		singletonSet.add(temp4);
+//		
+//		assertTrue(mySet1.singletonSets().equals(singletonSet));
 		
 	}
 
