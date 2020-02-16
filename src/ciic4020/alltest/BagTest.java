@@ -1,4 +1,4 @@
-package ciic4020.bag.test;
+package ciic4020.alltest;
 
 import java.util.Scanner;
 

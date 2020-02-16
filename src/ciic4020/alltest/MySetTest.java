@@ -1,4 +1,4 @@
-package ciic4020.set.test;
+package ciic4020.alltest;
 
 import static org.junit.Assert.*;
 

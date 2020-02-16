@@ -108,6 +108,7 @@ public class DynamicSet<E> implements Set<E> {
 	
 	public static boolean checkDisjoint(Object[] sets) {
 		
+		/* O(n^2) solution
 		Set<Integer> temp = new DynamicSet<Integer>(sets.length);
 		
 		//nested for loop, with inner loop 1 index ahead than outer to check every possible set
@@ -125,6 +126,18 @@ public class DynamicSet<E> implements Set<E> {
 		}
 		
 		return false;
+		*/
+		
+		// O(n) solution
+		Set<Integer> temp = (Set<Integer>)sets[0];
+		
+		//loops through the arrays, storing the common elements in temp through intersection method
+		for(int i=0; i<sets.length; i++) {
+			temp = temp.intersection((Set<Integer>)sets[i]);
+		}
+		
+		//if temp is empty, then there is at least 1 disjoint set
+		return temp.isEmpty();
 
 	}
 	

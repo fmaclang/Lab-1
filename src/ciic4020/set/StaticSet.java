@@ -165,19 +165,23 @@ public class StaticSet<E> implements Set<E> {
 	
 	public static boolean checkDisjoint(Object[] sets) {
 		
-		Set<Integer> temp = new StaticSet<Integer>(10);
+		Set<Integer> temp = new DynamicSet<Integer>(sets.length);
 		
+		//nested for loop, with inner loop 1 index ahead than outer to check every possible set
 		for(int i=0; i<sets.length; i++) {
 			for(int j=i+1; j<sets.length; j++) {
 				
-				if(sets[i] instanceof Set && sets[j] instanceof Set) {
-					temp = ((Set<Integer>)sets[i]).intersection((Set<Integer>)sets[j]);
-				}
+				//find the intersection between set1 and set2, and so on...
+				temp = ((Set<Integer>) sets[i]).intersection(((Set<Integer>) sets[j]));
+				
+				//if the intersection of the set[i] and set[j] is not empty, then it is not disjoint
+				if(temp.isEmpty())
+					return true;
 				
 			}
 		}
 		
-		return temp.isEmpty();
+		return false;
 
 	}
 
